@@ -5,11 +5,10 @@ using System.Web;
 
 namespace RPG_Guia.Models
 {
-    public class Item
+    public class Raça
     {
-        public int ItemId { get; set; }
+        public int RaçaId { get; set; }
         public string Descriçao { get; set; }
         public string Nome { get; set; }
-        public virtual List<Ficha> Fichas { get; set; }
     }
 }

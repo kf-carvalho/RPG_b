@@ -7,13 +7,13 @@ namespace RPG_Guia.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class Estabilizandotabelaspt1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Estabilizandotabelaspt1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201912261606497_Initial"; }
+            get { return "201912270852314_Estabilizando tabelas pt1"; }
         }
         
         string IMigrationMetadata.Source
