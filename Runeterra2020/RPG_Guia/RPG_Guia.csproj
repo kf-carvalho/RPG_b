@@ -132,14 +132,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912261606497_Initial.cs" />
-    <Compile Include="Migrations\201912261606497_Initial.designer.cs">
-      <DependentUpon>201912261606497_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201912270852314_Estabilizando tabelas pt1.cs" />
+    <Compile Include="Migrations\201912270852314_Estabilizando tabelas pt1.designer.cs">
+      <DependentUpon>201912270852314_Estabilizando tabelas pt1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Classe.cs" />
     <Compile Include="Models\Ficha.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Pericia.cs" />
+    <Compile Include="Models\Raça.cs" />
     <Compile Include="Models\Rune\PulsoRunico.cs" />
     <Compile Include="Models\Rune\Runa.cs" />
     <Compile Include="Models\Territorio.cs" />
@@ -1929,8 +1931,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912261606497_Initial.resx">
-      <DependentUpon>201912261606497_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912270852314_Estabilizando tabelas pt1.resx">
+      <DependentUpon>201912270852314_Estabilizando tabelas pt1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

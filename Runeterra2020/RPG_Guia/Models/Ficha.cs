@@ -10,15 +10,19 @@ namespace RPG_Guia.Models
         public int FichaId { get; set; }
         public string Nome_Jogador { get; set; }
         public string Nome_Personagem { get; set; }
-        public string Raça { get; set; }
-        public string Classe { get; set; }
         public string Antepassado { get; set; }
-        public string Alinhamento { get; set; }
+        public string Tendencia { get; set; }
+        //FK
         public virtual Territorio Territorio { get; set; }
         public int TerritorioId { get; set; }
-        
+        public virtual Raça Raça { get; set; }
+        public int RaçaId { get; set; }
+        public Classe Classe { get; set; }
+        public int ClasseId { get; set; }
+        //
         public List<Pericia> Pericias { get; set; }
-        public List<Item> Items { get; set; }
+        public virtual List<Item> Itens { get; set; }
+
         public Ficha()
         {
             this.Pericias = new List<Pericia>();
