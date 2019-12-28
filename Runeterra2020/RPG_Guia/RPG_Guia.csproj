@@ -128,13 +128,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912270852314_Estabilizando tabelas pt1.cs" />
-    <Compile Include="Migrations\201912270852314_Estabilizando tabelas pt1.designer.cs">
-      <DependentUpon>201912270852314_Estabilizando tabelas pt1.cs</DependentUpon>
+    <Compile Include="Migrations\201912281325019_apply fk.cs" />
+    <Compile Include="Migrations\201912281325019_apply fk.designer.cs">
+      <DependentUpon>201912281325019_apply fk.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classe.cs" />
@@ -1921,6 +1922,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1931,8 +1937,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912270852314_Estabilizando tabelas pt1.resx">
-      <DependentUpon>201912270852314_Estabilizando tabelas pt1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912281325019_apply fk.resx">
+      <DependentUpon>201912281325019_apply fk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

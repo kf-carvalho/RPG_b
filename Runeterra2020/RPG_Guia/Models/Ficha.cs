@@ -20,12 +20,11 @@ namespace RPG_Guia.Models
         public Classe Classe { get; set; }
         public int ClasseId { get; set; }
         //
-        public List<Pericia> Pericias { get; set; }
+        public virtual List<Pericia> Pericias { get; set; }
         public virtual List<Item> Itens { get; set; }
 
         public Ficha()
         {
-            this.Pericias = new List<Pericia>();
         }
     }
     

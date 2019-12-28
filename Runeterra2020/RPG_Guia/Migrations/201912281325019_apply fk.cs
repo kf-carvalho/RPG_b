@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Estabilizandotabelaspt1 : DbMigration
+    public partial class applyfk : DbMigration
     {
         public override void Up()
         {
@@ -56,11 +56,8 @@
                         Modificador = c.Int(nullable: false),
                         Mastery = c.String(),
                         Proeficiencia = c.Boolean(nullable: false),
-                        Ficha_FichaId = c.Int(),
                     })
-                .PrimaryKey(t => t.PericiaId)
-                .ForeignKey("dbo.Fichas", t => t.Ficha_FichaId)
-                .Index(t => t.Ficha_FichaId);
+                .PrimaryKey(t => t.PericiaId);
             
             CreateTable(
                 "dbo.Raça",
@@ -121,22 +118,38 @@
                 .Index(t => t.Item_ItemId)
                 .Index(t => t.Ficha_FichaId);
             
+            CreateTable(
+                "dbo.PericiaFichas",
+                c => new
+                    {
+                        Pericia_PericiaId = c.Int(nullable: false),
+                        Ficha_FichaId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Pericia_PericiaId, t.Ficha_FichaId })
+                .ForeignKey("dbo.Pericias", t => t.Pericia_PericiaId, cascadeDelete: true)
+                .ForeignKey("dbo.Fichas", t => t.Ficha_FichaId, cascadeDelete: true)
+                .Index(t => t.Pericia_PericiaId)
+                .Index(t => t.Ficha_FichaId);
+            
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Fichas", "TerritorioId", "dbo.Territorios");
             DropForeignKey("dbo.Fichas", "RaçaId", "dbo.Raça");
-            DropForeignKey("dbo.Pericias", "Ficha_FichaId", "dbo.Fichas");
+            DropForeignKey("dbo.PericiaFichas", "Ficha_FichaId", "dbo.Fichas");
+            DropForeignKey("dbo.PericiaFichas", "Pericia_PericiaId", "dbo.Pericias");
             DropForeignKey("dbo.ItemFichas", "Ficha_FichaId", "dbo.Fichas");
             DropForeignKey("dbo.ItemFichas", "Item_ItemId", "dbo.Items");
             DropForeignKey("dbo.Fichas", "ClasseId", "dbo.Classes");
+            DropIndex("dbo.PericiaFichas", new[] { "Ficha_FichaId" });
+            DropIndex("dbo.PericiaFichas", new[] { "Pericia_PericiaId" });
             DropIndex("dbo.ItemFichas", new[] { "Ficha_FichaId" });
             DropIndex("dbo.ItemFichas", new[] { "Item_ItemId" });
-            DropIndex("dbo.Pericias", new[] { "Ficha_FichaId" });
             DropIndex("dbo.Fichas", new[] { "ClasseId" });
             DropIndex("dbo.Fichas", new[] { "RaçaId" });
             DropIndex("dbo.Fichas", new[] { "TerritorioId" });
+            DropTable("dbo.PericiaFichas");
             DropTable("dbo.ItemFichas");
             DropTable("dbo.Runas");
             DropTable("dbo.PulsoRunicoes");

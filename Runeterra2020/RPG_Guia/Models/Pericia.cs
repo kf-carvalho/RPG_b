@@ -15,6 +15,8 @@ namespace RPG_Guia.Models
         //Indicador se o jogador possui proeficiencia na pericia para adicionar o bonus de proeficiencia
         public bool Proeficiencia { get; set; }
 
+        public virtual List<Ficha> Fichas { get; set; }
+
         public Pericia(){
           
         }
