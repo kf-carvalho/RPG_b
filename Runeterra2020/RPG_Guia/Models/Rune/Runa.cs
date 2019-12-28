@@ -9,9 +9,9 @@ namespace RPG_Guia.Models
     {
         //Atributos descritivos da runa
         public int RunaId { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
+        public string Descriçao { get; set; }
         public string Nivel { get; set; }
+        public string Nome { get; set; }
         //Atributos modificados pelo nivel
         public string Alcance { get; set; }
         public string Cura { get; set; }
