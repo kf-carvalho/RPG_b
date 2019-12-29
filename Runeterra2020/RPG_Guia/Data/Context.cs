@@ -13,11 +13,13 @@ namespace RPG_Guia.Data
         {
 
         }
-        public DbSet<Ficha> fichas { get; set; }
-        public DbSet<Item> itens { get; set; }
-        public DbSet<PulsoRunico> pulsos { get; set; }
-        public DbSet<Pericia> pericias { get; set; }
-        public DbSet<Runa> runas { get; set; }
-        public DbSet<Territorio> territorios { get; set; }
+        public DbSet<Classe> Classes { get; set; }
+        public DbSet<Ficha> Fichas { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<PulsoRunico> PulsoRunicos { get; set; }
+        public DbSet<Pericia> Pericias { get; set; }
+        public DbSet<Runa> Runas { get; set; }
+        public DbSet<Territorio> Territorios { get; set; }
+        public DbSet<Raça> Raças { get; set; }
     }
 }

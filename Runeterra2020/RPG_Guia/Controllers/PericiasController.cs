@@ -11,107 +11,107 @@ using RPG_Guia.Models;
 
 namespace RPG_Guia.Controllers
 {
-    public class ItemsController : Controller
+    public class PericiasController : Controller
     {
         private Context db = new Context();
 
-        // GET: Items
+        // GET: Pericias
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Pericias.ToList());
         }
 
-        // GET: Items/Details/5
+        // GET: Pericias/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Pericia pericia = db.Pericias.Find(id);
+            if (pericia == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(pericia);
         }
 
-        // GET: Items/Create
+        // GET: Pericias/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Items/Create
+        // POST: Pericias/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Create([Bind(Include = "PericiaId,Modificador,Mastery,Proeficiencia")] Pericia pericia)
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(item);
+                db.Pericias.Add(pericia);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(item);
+            return View(pericia);
         }
 
-        // GET: Items/Edit/5
+        // GET: Pericias/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Pericia pericia = db.Pericias.Find(id);
+            if (pericia == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(pericia);
         }
 
-        // POST: Items/Edit/5
+        // POST: Pericias/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Edit([Bind(Include = "PericiaId,Modificador,Mastery,Proeficiencia")] Pericia pericia)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(item).State = EntityState.Modified;
+                db.Entry(pericia).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(item);
+            return View(pericia);
         }
 
-        // GET: Items/Delete/5
+        // GET: Pericias/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Pericia pericia = db.Pericias.Find(id);
+            if (pericia == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(pericia);
         }
 
-        // POST: Items/Delete/5
+        // POST: Pericias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
+            Pericia pericia = db.Pericias.Find(id);
+            db.Pericias.Remove(pericia);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

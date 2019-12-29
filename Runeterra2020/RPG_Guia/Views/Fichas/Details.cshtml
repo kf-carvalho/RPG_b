@@ -1,0 +1,74 @@
+﻿@model RPG_Guia.Models.Ficha
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ficha</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Classe.Descriçao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classe.Descriçao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raça.Descriçao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raça.Descriçao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Territorio.Descriçao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Territorio.Descriçao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_Jogador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_Jogador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_Personagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_Personagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Antepassado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Antepassado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tendencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tendencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FichaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -3,10 +3,20 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class applyfk : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Classes",
+                c => new
+                    {
+                        ClasseId = c.Int(nullable: false, identity: true),
+                        Descriçao = c.String(),
+                        Nome = c.String(),
+                    })
+                .PrimaryKey(t => t.ClasseId);
+            
             CreateTable(
                 "dbo.Fichas",
                 c => new
@@ -27,16 +37,6 @@
                 .Index(t => t.TerritorioId)
                 .Index(t => t.RaçaId)
                 .Index(t => t.ClasseId);
-            
-            CreateTable(
-                "dbo.Classes",
-                c => new
-                    {
-                        ClasseId = c.Int(nullable: false, identity: true),
-                        Descriçao = c.String(),
-                        Nome = c.String(),
-                    })
-                .PrimaryKey(t => t.ClasseId);
             
             CreateTable(
                 "dbo.Items",
@@ -157,8 +157,8 @@
             DropTable("dbo.Raça");
             DropTable("dbo.Pericias");
             DropTable("dbo.Items");
-            DropTable("dbo.Classes");
             DropTable("dbo.Fichas");
+            DropTable("dbo.Classes");
         }
     }
 }

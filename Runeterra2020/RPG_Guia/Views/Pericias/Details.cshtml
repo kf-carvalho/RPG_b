@@ -1,0 +1,42 @@
+﻿@model RPG_Guia.Models.Pericia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pericia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Modificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mastery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mastery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proeficiencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proeficiencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PericiaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

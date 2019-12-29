@@ -11,107 +11,107 @@ using RPG_Guia.Models;
 
 namespace RPG_Guia.Controllers
 {
-    public class ItemsController : Controller
+    public class TerritoriosController : Controller
     {
         private Context db = new Context();
 
-        // GET: Items
+        // GET: Territorios
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Territorios.ToList());
         }
 
-        // GET: Items/Details/5
+        // GET: Territorios/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Territorio territorio = db.Territorios.Find(id);
+            if (territorio == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(territorio);
         }
 
-        // GET: Items/Create
+        // GET: Territorios/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Items/Create
+        // POST: Territorios/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Create([Bind(Include = "TerritorioId,Descriçao,Nome")] Territorio territorio)
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(item);
+                db.Territorios.Add(territorio);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(item);
+            return View(territorio);
         }
 
-        // GET: Items/Edit/5
+        // GET: Territorios/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Territorio territorio = db.Territorios.Find(id);
+            if (territorio == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(territorio);
         }
 
-        // POST: Items/Edit/5
+        // POST: Territorios/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Edit([Bind(Include = "TerritorioId,Descriçao,Nome")] Territorio territorio)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(item).State = EntityState.Modified;
+                db.Entry(territorio).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(item);
+            return View(territorio);
         }
 
-        // GET: Items/Delete/5
+        // GET: Territorios/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Territorio territorio = db.Territorios.Find(id);
+            if (territorio == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(territorio);
         }
 
-        // POST: Items/Delete/5
+        // POST: Territorios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
+            Territorio territorio = db.Territorios.Find(id);
+            db.Territorios.Remove(territorio);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

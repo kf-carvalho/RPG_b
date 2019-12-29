@@ -11,107 +11,107 @@ using RPG_Guia.Models;
 
 namespace RPG_Guia.Controllers
 {
-    public class ItemsController : Controller
+    public class PulsoRunicoesController : Controller
     {
         private Context db = new Context();
 
-        // GET: Items
+        // GET: PulsoRunicoes
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.PulsoRunicos.ToList());
         }
 
-        // GET: Items/Details/5
+        // GET: PulsoRunicoes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            PulsoRunico pulsoRunico = db.PulsoRunicos.Find(id);
+            if (pulsoRunico == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(pulsoRunico);
         }
 
-        // GET: Items/Create
+        // GET: PulsoRunicoes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Items/Create
+        // POST: PulsoRunicoes/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Create([Bind(Include = "PulsoRunicoId,Descriçao,Nome")] PulsoRunico pulsoRunico)
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(item);
+                db.PulsoRunicos.Add(pulsoRunico);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(item);
+            return View(pulsoRunico);
         }
 
-        // GET: Items/Edit/5
+        // GET: PulsoRunicoes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            PulsoRunico pulsoRunico = db.PulsoRunicos.Find(id);
+            if (pulsoRunico == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(pulsoRunico);
         }
 
-        // POST: Items/Edit/5
+        // POST: PulsoRunicoes/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Edit([Bind(Include = "PulsoRunicoId,Descriçao,Nome")] PulsoRunico pulsoRunico)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(item).State = EntityState.Modified;
+                db.Entry(pulsoRunico).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(item);
+            return View(pulsoRunico);
         }
 
-        // GET: Items/Delete/5
+        // GET: PulsoRunicoes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            PulsoRunico pulsoRunico = db.PulsoRunicos.Find(id);
+            if (pulsoRunico == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(pulsoRunico);
         }
 
-        // POST: Items/Delete/5
+        // POST: PulsoRunicoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
+            PulsoRunico pulsoRunico = db.PulsoRunicos.Find(id);
+            db.PulsoRunicos.Remove(pulsoRunico);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

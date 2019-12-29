@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RPG_Guia.Models.Pericia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Modificador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mastery)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proeficiencia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mastery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proeficiencia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PericiaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PericiaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PericiaId })
+        </td>
+    </tr>
+}
+
+</table>
