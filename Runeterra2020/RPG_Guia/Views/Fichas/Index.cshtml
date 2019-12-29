@@ -1,0 +1,69 @@
+﻿@model IEnumerable<RPG_Guia.Models.Ficha>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Classe.Descriçao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Raça.Descriçao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Territorio.Descriçao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome_Jogador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome_Personagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Antepassado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tendencia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Classe.Descriçao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Raça.Descriçao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Territorio.Descriçao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome_Jogador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome_Personagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Antepassado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tendencia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FichaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FichaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FichaId })
+        </td>
+    </tr>
+}
+
+</table>

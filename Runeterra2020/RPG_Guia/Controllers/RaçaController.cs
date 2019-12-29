@@ -11,107 +11,107 @@ using RPG_Guia.Models;
 
 namespace RPG_Guia.Controllers
 {
-    public class ItemsController : Controller
+    public class RaçaController : Controller
     {
         private Context db = new Context();
 
-        // GET: Items
+        // GET: Raça
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Raças.ToList());
         }
 
-        // GET: Items/Details/5
+        // GET: Raça/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Raça raça = db.Raças.Find(id);
+            if (raça == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(raça);
         }
 
-        // GET: Items/Create
+        // GET: Raça/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Items/Create
+        // POST: Raça/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Create([Bind(Include = "RaçaId,Descriçao,Nome")] Raça raça)
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(item);
+                db.Raças.Add(raça);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(item);
+            return View(raça);
         }
 
-        // GET: Items/Edit/5
+        // GET: Raça/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Raça raça = db.Raças.Find(id);
+            if (raça == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(raça);
         }
 
-        // POST: Items/Edit/5
+        // POST: Raça/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,Descriçao,Nome")] Item item)
+        public ActionResult Edit([Bind(Include = "RaçaId,Descriçao,Nome")] Raça raça)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(item).State = EntityState.Modified;
+                db.Entry(raça).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(item);
+            return View(raça);
         }
 
-        // GET: Items/Delete/5
+        // GET: Raça/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            Raça raça = db.Raças.Find(id);
+            if (raça == null)
             {
                 return HttpNotFound();
             }
-            return View(item);
+            return View(raça);
         }
 
-        // POST: Items/Delete/5
+        // POST: Raça/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
+            Raça raça = db.Raças.Find(id);
+            db.Raças.Remove(raça);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

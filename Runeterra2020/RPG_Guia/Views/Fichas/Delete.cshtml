@@ -1,0 +1,80 @@
+﻿@model RPG_Guia.Models.Ficha
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ficha</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Classe.Descriçao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classe.Descriçao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raça.Descriçao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raça.Descriçao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Territorio.Descriçao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Territorio.Descriçao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_Jogador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_Jogador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_Personagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_Personagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Antepassado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Antepassado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tendencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tendencia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

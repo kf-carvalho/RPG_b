@@ -10,6 +10,7 @@ namespace RPG_Guia.Models
         public int ClasseId { get; set; }
         public string Descriçao { get; set; }
         public string Nome { get; set; }
-        
+        public virtual ICollection<Ficha> Fichas { get; set; }
+
     }
 }

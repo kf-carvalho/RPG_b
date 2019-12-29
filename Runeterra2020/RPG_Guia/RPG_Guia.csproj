@@ -127,15 +127,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
+    <Compile Include="Controllers\FichasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\PericiasController.cs" />
+    <Compile Include="Controllers\PulsoRunicoesController.cs" />
+    <Compile Include="Controllers\RaçaController.cs" />
+    <Compile Include="Controllers\RunasController.cs" />
+    <Compile Include="Controllers\TerritoriosController.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912281325019_apply fk.cs" />
-    <Compile Include="Migrations\201912281325019_apply fk.designer.cs">
-      <DependentUpon>201912281325019_apply fk.cs</DependentUpon>
+    <Compile Include="Migrations\201912290025497_Initial.cs" />
+    <Compile Include="Migrations\201912290025497_Initial.designer.cs">
+      <DependentUpon>201912290025497_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classe.cs" />
@@ -1927,6 +1934,41 @@
     <Content Include="Views\Items\Details.cshtml" />
     <Content Include="Views\Items\Edit.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Fichas\Create.cshtml" />
+    <Content Include="Views\Fichas\Delete.cshtml" />
+    <Content Include="Views\Fichas\Details.cshtml" />
+    <Content Include="Views\Fichas\Edit.cshtml" />
+    <Content Include="Views\Fichas\Index.cshtml" />
+    <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\Classes\Delete.cshtml" />
+    <Content Include="Views\Classes\Details.cshtml" />
+    <Content Include="Views\Classes\Edit.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Pericias\Create.cshtml" />
+    <Content Include="Views\Pericias\Delete.cshtml" />
+    <Content Include="Views\Pericias\Details.cshtml" />
+    <Content Include="Views\Pericias\Edit.cshtml" />
+    <Content Include="Views\Pericias\Index.cshtml" />
+    <Content Include="Views\Raça\Create.cshtml" />
+    <Content Include="Views\Raça\Delete.cshtml" />
+    <Content Include="Views\Raça\Details.cshtml" />
+    <Content Include="Views\Raça\Edit.cshtml" />
+    <Content Include="Views\Raça\Index.cshtml" />
+    <Content Include="Views\Territorios\Create.cshtml" />
+    <Content Include="Views\Territorios\Delete.cshtml" />
+    <Content Include="Views\Territorios\Details.cshtml" />
+    <Content Include="Views\Territorios\Edit.cshtml" />
+    <Content Include="Views\Territorios\Index.cshtml" />
+    <Content Include="Views\PulsoRunicoes\Create.cshtml" />
+    <Content Include="Views\PulsoRunicoes\Delete.cshtml" />
+    <Content Include="Views\PulsoRunicoes\Details.cshtml" />
+    <Content Include="Views\PulsoRunicoes\Edit.cshtml" />
+    <Content Include="Views\PulsoRunicoes\Index.cshtml" />
+    <Content Include="Views\Runas\Create.cshtml" />
+    <Content Include="Views\Runas\Delete.cshtml" />
+    <Content Include="Views\Runas\Details.cshtml" />
+    <Content Include="Views\Runas\Edit.cshtml" />
+    <Content Include="Views\Runas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1937,8 +1979,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912281325019_apply fk.resx">
-      <DependentUpon>201912281325019_apply fk.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912290025497_Initial.resx">
+      <DependentUpon>201912290025497_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
