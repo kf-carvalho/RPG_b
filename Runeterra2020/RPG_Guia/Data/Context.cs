@@ -16,10 +16,11 @@ namespace RPG_Guia.Data
         public DbSet<Classe> Classes { get; set; }
         public DbSet<Ficha> Fichas { get; set; }
         public DbSet<Item> Items { get; set; }
-        public DbSet<PulsoRunico> PulsoRunicos { get; set; }
         public DbSet<Pericia> Pericias { get; set; }
         public DbSet<Runa> Runas { get; set; }
         public DbSet<Territorio> Territorios { get; set; }
         public DbSet<Raça> Raças { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<EscalaRunica> EscalaRunicas { get; set; }
     }
 }
