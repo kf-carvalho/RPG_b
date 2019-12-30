@@ -127,32 +127,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ClassesController.cs" />
-    <Compile Include="Controllers\FichasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ItemsController.cs" />
-    <Compile Include="Controllers\PericiasController.cs" />
-    <Compile Include="Controllers\PulsoRunicoesController.cs" />
-    <Compile Include="Controllers\RaçaController.cs" />
-    <Compile Include="Controllers\RunasController.cs" />
-    <Compile Include="Controllers\TerritoriosController.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912290025497_Initial.cs" />
-    <Compile Include="Migrations\201912290025497_Initial.designer.cs">
-      <DependentUpon>201912290025497_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201912302342442_Initial.cs" />
+    <Compile Include="Migrations\201912302342442_Initial.designer.cs">
+      <DependentUpon>201912302342442_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Classe.cs" />
-    <Compile Include="Models\Ficha.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\Pericia.cs" />
-    <Compile Include="Models\Raça.cs" />
-    <Compile Include="Models\Rune\PulsoRunico.cs" />
+    <Compile Include="Models\Dungeon\Classe.cs" />
+    <Compile Include="Models\Dungeon\Ficha.cs" />
+    <Compile Include="Models\Dungeon\Item.cs" />
+    <Compile Include="Models\Dungeon\Pericia.cs" />
+    <Compile Include="Models\Dungeon\Raça.cs" />
+    <Compile Include="Models\Rune\EscalaRunica.cs" />
     <Compile Include="Models\Rune\Runa.cs" />
-    <Compile Include="Models\Territorio.cs" />
+    <Compile Include="Models\Dungeon\Territorio.cs" />
+    <Compile Include="Models\Account\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1979,8 +1972,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912290025497_Initial.resx">
-      <DependentUpon>201912290025497_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912302342442_Initial.resx">
+      <DependentUpon>201912302342442_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

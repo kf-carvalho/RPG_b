@@ -5,10 +5,10 @@ using System.Web;
 
 namespace RPG_Guia.Models
 {
-    public class PulsoRunico
+    public class EscalaRunica
     {
-        public int PulsoRunicoId { get; set; }
-        public string Descriçao { get; set; }
+        public int EscalaRunicaId { get; set; }
         public string Nome { get; set; }
+        public virtual ICollection<Runa> Runas { get; set; }
     }
 }

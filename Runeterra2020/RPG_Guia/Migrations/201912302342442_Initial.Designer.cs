@@ -13,7 +13,7 @@ namespace RPG_Guia.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201912290025497_Initial"; }
+            get { return "201912302342442_Initial"; }
         }
         
         string IMigrationMetadata.Source
