@@ -17,6 +17,8 @@ namespace RPG_Guia.Models
         public string Vinculo { get; set; }
         public string Fraqueza { get; set; }
         public string Caracteristica { get; set; }
+        //Testes
+        public int ClasseArmadura { get; set; }
         //Habilidades Naturais
         public int Força { get; set; }
         public int Inteligencia { get; set; }

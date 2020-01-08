@@ -145,6 +145,10 @@
     <Compile Include="Migrations\202001032243211_LoginGitPush.designer.cs">
       <DependentUpon>202001032243211_LoginGitPush.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001081232598_Normaliza.cs" />
+    <Compile Include="Migrations\202001081232598_Normaliza.designer.cs">
+      <DependentUpon>202001081232598_Normaliza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Dungeon\Classe.cs" />
     <Compile Include="Models\Dungeon\Ficha.cs" />
@@ -1989,6 +1993,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202001032243211_LoginGitPush.resx">
       <DependentUpon>202001032243211_LoginGitPush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001081232598_Normaliza.resx">
+      <DependentUpon>202001081232598_Normaliza.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
