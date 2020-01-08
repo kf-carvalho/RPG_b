@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using RPG_Guia.Data;
 using RPG_Guia.Models;
 
-namespace RPG_Guia.Controllers.Dungeon
+namespace RPG_Guia.Controllers
 {
     public class RaçaController : Controller
     {

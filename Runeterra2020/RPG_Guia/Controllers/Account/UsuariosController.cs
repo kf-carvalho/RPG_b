@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using RPG_Guia.Data;
 using RPG_Guia.Models;
 
-namespace RPG_Guia.Controllers.Account
+namespace RPG_Guia.Controllers
 {
     public class UsuariosController : Controller
     {

@@ -87,7 +87,6 @@ C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Gu
 C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.csproj.CopyComplete
 C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.dll
 C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.pdb
-C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.Migrations.Initial.resources
 C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.csproj.GenerateResource.cache
 C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\bin\RPG_Guia.dll.config
 C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\bin\RPG_Guia.dll
@@ -180,3 +179,5 @@ C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Gu
 C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.pdb
 C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.Migrations.LoginGitPush.resources
 C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.csproj.GenerateResource.cache
+C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.Migrations.LoginGitPush.resources
+C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.Migrations.Normaliza.resources
