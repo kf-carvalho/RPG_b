@@ -127,14 +127,27 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Account\UsuariosController.cs" />
+    <Compile Include="Controllers\Dungeon\ClassesController.cs" />
+    <Compile Include="Controllers\Dungeon\FichasController.cs" />
+    <Compile Include="Controllers\Dungeon\ItemsController.cs" />
+    <Compile Include="Controllers\Dungeon\PericiasController.cs" />
+    <Compile Include="Controllers\Dungeon\RaçaController.cs" />
+    <Compile Include="Controllers\Dungeon\TerritoriosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Rune\EscalaRunicasController.cs" />
+    <Compile Include="Controllers\Rune\RunasController.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912302342442_Initial.cs" />
-    <Compile Include="Migrations\201912302342442_Initial.designer.cs">
-      <DependentUpon>201912302342442_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202001032243211_LoginGitPush.cs" />
+    <Compile Include="Migrations\202001032243211_LoginGitPush.designer.cs">
+      <DependentUpon>202001032243211_LoginGitPush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001081232598_Normaliza.cs" />
+    <Compile Include="Migrations\202001081232598_Normaliza.designer.cs">
+      <DependentUpon>202001081232598_Normaliza.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Dungeon\Classe.cs" />
@@ -1922,11 +1935,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Items\Create.cshtml" />
-    <Content Include="Views\Items\Delete.cshtml" />
-    <Content Include="Views\Items\Details.cshtml" />
-    <Content Include="Views\Items\Edit.cshtml" />
-    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Fichas\Create.cshtml" />
     <Content Include="Views\Fichas\Delete.cshtml" />
     <Content Include="Views\Fichas\Details.cshtml" />
@@ -1937,6 +1950,11 @@
     <Content Include="Views\Classes\Details.cshtml" />
     <Content Include="Views\Classes\Edit.cshtml" />
     <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Pericias\Create.cshtml" />
     <Content Include="Views\Pericias\Delete.cshtml" />
     <Content Include="Views\Pericias\Details.cshtml" />
@@ -1952,16 +1970,17 @@
     <Content Include="Views\Territorios\Details.cshtml" />
     <Content Include="Views\Territorios\Edit.cshtml" />
     <Content Include="Views\Territorios\Index.cshtml" />
-    <Content Include="Views\PulsoRunicoes\Create.cshtml" />
-    <Content Include="Views\PulsoRunicoes\Delete.cshtml" />
-    <Content Include="Views\PulsoRunicoes\Details.cshtml" />
-    <Content Include="Views\PulsoRunicoes\Edit.cshtml" />
-    <Content Include="Views\PulsoRunicoes\Index.cshtml" />
+    <Content Include="Views\EscalaRunicas\Create.cshtml" />
+    <Content Include="Views\EscalaRunicas\Delete.cshtml" />
+    <Content Include="Views\EscalaRunicas\Details.cshtml" />
+    <Content Include="Views\EscalaRunicas\Edit.cshtml" />
+    <Content Include="Views\EscalaRunicas\Index.cshtml" />
     <Content Include="Views\Runas\Create.cshtml" />
     <Content Include="Views\Runas\Delete.cshtml" />
     <Content Include="Views\Runas\Details.cshtml" />
     <Content Include="Views\Runas\Edit.cshtml" />
     <Content Include="Views\Runas\Index.cshtml" />
+    <Content Include="Views\Usuarios\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1972,8 +1991,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912302342442_Initial.resx">
-      <DependentUpon>201912302342442_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001032243211_LoginGitPush.resx">
+      <DependentUpon>202001032243211_LoginGitPush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001081232598_Normaliza.resx">
+      <DependentUpon>202001081232598_Normaliza.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
