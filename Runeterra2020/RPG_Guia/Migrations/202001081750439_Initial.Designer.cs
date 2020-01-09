@@ -7,13 +7,13 @@ namespace RPG_Guia.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class Normaliza : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Normaliza));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202001081232598_Normaliza"; }
+            get { return "202001081750439_Initial"; }
         }
         
         string IMigrationMetadata.Source

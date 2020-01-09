@@ -39,7 +39,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index">
+                <a class="nav-link"  href="@Url.RouteUrl(new { controller = "Home", action = "Index" })">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Inicio</span>
                 </a>
@@ -97,7 +97,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Meus Arquivos</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -130,7 +130,15 @@
                 <div id="collapseRegistros" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Banco de dados:</h6>
-                        @Html.ActionLink("Fichas", "Index","Fichas") 
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Fichas", action = "Index" })">Fichas</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Classes", action = "Index" })">Classes</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Runas", action = "Index" })">Runas</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "EscalaRunicas", action = "Index" })">Escalas Rúnicas</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Items", action = "Index" })">Itens</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Pericias", action = "Index" })">Pericias</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Raça", action = "Index" })">Raças</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Territorios", action = "Index" })">Territorios</a>
+                        <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Usuarios", action = "Index" })">Usuários</a>
                     </div>
                 </div>
             </li>
@@ -187,7 +195,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
+                                <span class="badge badge-danger badge-counter"></span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
@@ -236,7 +244,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
+                                <span class="badge badge-danger badge-counter"></span>
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
@@ -292,8 +300,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Kaffee</span>
+                                <img class="img-profile rounded-circle" src="">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using RPG_Guia.Data;
 using RPG_Guia.Models;
 
-namespace RPG_Guia.Controllers
+namespace RPG_Guia.Controllers.Dungeon
 {
     public class ClassesController : Controller
     {
@@ -47,7 +47,7 @@ namespace RPG_Guia.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClasseId,Descriçao,Nome")] Classe classe)
+        public ActionResult Create([Bind(Include = "ClasseId,Descriçao,DadoVida,Resistência,Habilidades,Proeficiencias,Nome")] Classe classe)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace RPG_Guia.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClasseId,Descriçao,Nome")] Classe classe)
+        public ActionResult Edit([Bind(Include = "ClasseId,Descriçao,DadoVida,Resistência,Habilidades,Proeficiencias,Nome")] Classe classe)
         {
             if (ModelState.IsValid)
             {

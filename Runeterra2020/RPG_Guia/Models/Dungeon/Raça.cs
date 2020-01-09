@@ -8,8 +8,9 @@ namespace RPG_Guia.Models
     public class Raça
     {
         public int RaçaId { get; set; }
-        public string Descriçao { get; set; }
         public string Nome { get; set; }
+        public string Descriçao { get; set; }
+        public string Traços { get; set; }
         public virtual ICollection<Ficha> Fichas { get; set; }
 
     }

@@ -11,4 +11,10 @@ namespace RPG_Guia.Models
         public string Nome { get; set; }
         public virtual ICollection<Runa> Runas { get; set; }
     }
+    /*
+        Fagulha Rúnica
+        Pulso Rúnico
+        Explosão Rúnica
+        Fluxo Rúnico
+    */
 }
