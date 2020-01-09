@@ -141,13 +141,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001032243211_LoginGitPush.cs" />
-    <Compile Include="Migrations\202001032243211_LoginGitPush.designer.cs">
-      <DependentUpon>202001032243211_LoginGitPush.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202001081232598_Normaliza.cs" />
-    <Compile Include="Migrations\202001081232598_Normaliza.designer.cs">
-      <DependentUpon>202001081232598_Normaliza.cs</DependentUpon>
+    <Compile Include="Migrations\202001081750439_Initial.cs" />
+    <Compile Include="Migrations\202001081750439_Initial.designer.cs">
+      <DependentUpon>202001081750439_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Dungeon\Classe.cs" />
@@ -1940,16 +1936,6 @@
     <Content Include="Views\Usuarios\Details.cshtml" />
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
-    <Content Include="Views\Fichas\Create.cshtml" />
-    <Content Include="Views\Fichas\Delete.cshtml" />
-    <Content Include="Views\Fichas\Details.cshtml" />
-    <Content Include="Views\Fichas\Edit.cshtml" />
-    <Content Include="Views\Fichas\Index.cshtml" />
-    <Content Include="Views\Classes\Create.cshtml" />
-    <Content Include="Views\Classes\Delete.cshtml" />
-    <Content Include="Views\Classes\Details.cshtml" />
-    <Content Include="Views\Classes\Edit.cshtml" />
-    <Content Include="Views\Classes\Index.cshtml" />
     <Content Include="Views\Items\Create.cshtml" />
     <Content Include="Views\Items\Delete.cshtml" />
     <Content Include="Views\Items\Details.cshtml" />
@@ -1960,11 +1946,6 @@
     <Content Include="Views\Pericias\Details.cshtml" />
     <Content Include="Views\Pericias\Edit.cshtml" />
     <Content Include="Views\Pericias\Index.cshtml" />
-    <Content Include="Views\Raça\Create.cshtml" />
-    <Content Include="Views\Raça\Delete.cshtml" />
-    <Content Include="Views\Raça\Details.cshtml" />
-    <Content Include="Views\Raça\Edit.cshtml" />
-    <Content Include="Views\Raça\Index.cshtml" />
     <Content Include="Views\Territorios\Create.cshtml" />
     <Content Include="Views\Territorios\Delete.cshtml" />
     <Content Include="Views\Territorios\Details.cshtml" />
@@ -1981,6 +1962,21 @@
     <Content Include="Views\Runas\Edit.cshtml" />
     <Content Include="Views\Runas\Index.cshtml" />
     <Content Include="Views\Usuarios\Login.cshtml" />
+    <Content Include="Views\Fichas\Create.cshtml" />
+    <Content Include="Views\Fichas\Delete.cshtml" />
+    <Content Include="Views\Fichas\Details.cshtml" />
+    <Content Include="Views\Fichas\Edit.cshtml" />
+    <Content Include="Views\Fichas\Index.cshtml" />
+    <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\Classes\Delete.cshtml" />
+    <Content Include="Views\Classes\Details.cshtml" />
+    <Content Include="Views\Classes\Edit.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Raça\Create.cshtml" />
+    <Content Include="Views\Raça\Delete.cshtml" />
+    <Content Include="Views\Raça\Details.cshtml" />
+    <Content Include="Views\Raça\Edit.cshtml" />
+    <Content Include="Views\Raça\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1991,11 +1987,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001032243211_LoginGitPush.resx">
-      <DependentUpon>202001032243211_LoginGitPush.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001081232598_Normaliza.resx">
-      <DependentUpon>202001081232598_Normaliza.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001081750439_Initial.resx">
+      <DependentUpon>202001081750439_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

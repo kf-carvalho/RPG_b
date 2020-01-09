@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Normaliza : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Fichas", "ClasseArmadura", c => c.Int(nullable: false));
+            AddColumn("dbo.Raça", "Traços", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Fichas", "ClasseArmadura");
+            DropColumn("dbo.Raça", "Traços");
         }
     }
 }

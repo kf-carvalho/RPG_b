@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using RPG_Guia.Data;
 using RPG_Guia.Models;
 
-namespace RPG_Guia.Controllers
+namespace RPG_Guia.Controllers.Dungeon
 {
     public class RaçaController : Controller
     {
@@ -47,7 +47,7 @@ namespace RPG_Guia.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RaçaId,Descriçao,Nome")] Raça raça)
+        public ActionResult Create([Bind(Include = "RaçaId,Nome,Descriçao,Traços")] Raça raça)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace RPG_Guia.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RaçaId,Descriçao,Nome")] Raça raça)
+        public ActionResult Edit([Bind(Include = "RaçaId,Nome,Descriçao,Traços")] Raça raça)
         {
             if (ModelState.IsValid)
             {

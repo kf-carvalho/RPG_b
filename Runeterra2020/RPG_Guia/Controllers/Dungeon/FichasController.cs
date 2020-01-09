@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using RPG_Guia.Data;
 using RPG_Guia.Models;
 
-namespace RPG_Guia.Controllers
+namespace RPG_Guia.Controllers.Dungeon
 {
     public class FichasController : Controller
     {
@@ -52,7 +52,7 @@ namespace RPG_Guia.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FichaId,Nome,Antepassado,Tendencia,Personalidade,Ideal,Vinculo,Fraqueza,Caracteristica,Força,Inteligencia,Sabedoria,Destreza,Constituição,Carisma,ClasseArmadura,UsuarioId,TerritorioId,RaçaId,ClasseId")] Ficha ficha)
+        public ActionResult Create([Bind(Include = "FichaId,Nome,Antepassado,Tendencia,Personalidade,Ideal,Vinculo,Fraqueza,Caracteristica,ClasseArmadura,Força,Inteligencia,Sabedoria,Destreza,Constituição,Carisma,UsuarioId,TerritorioId,RaçaId,ClasseId")] Ficha ficha)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace RPG_Guia.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FichaId,Nome,Antepassado,Tendencia,Personalidade,Ideal,Vinculo,Fraqueza,Caracteristica,Força,Inteligencia,Sabedoria,Destreza,Constituição,Carisma,ClasseArmadura,UsuarioId,TerritorioId,RaçaId,ClasseId")] Ficha ficha)
+        public ActionResult Edit([Bind(Include = "FichaId,Nome,Antepassado,Tendencia,Personalidade,Ideal,Vinculo,Fraqueza,Caracteristica,ClasseArmadura,Força,Inteligencia,Sabedoria,Destreza,Constituição,Carisma,UsuarioId,TerritorioId,RaçaId,ClasseId")] Ficha ficha)
         {
             if (ModelState.IsValid)
             {

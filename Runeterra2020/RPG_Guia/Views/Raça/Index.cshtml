@@ -4,36 +4,32 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Descriçao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descriçao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RaçaId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RaçaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RaçaId })
-        </td>
-    </tr>
-}
+<div style="float:right; margin-right:20px;color:#f6c23e">
+    <i class="far fa-plus-square"></i>
+    @Html.ActionLink("Criar Nova", "Create")
+</div>
 
-</table>
+<div style="padding: 1px 20px 1px 20px">
+    <h2>Lista de Raças</h2>
+    @foreach (var item in Model)
+    {
+        <!-- Collapsable Card Example -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardExample" class="d-block card-header py-3 border-left-warning " data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h5 class="m-0 font-weight-bold text-warning ">@item.Nome</h5>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardExample">
+                <div class="card-body">
+                    <h6 class="m-0 font-weight-bold" style="color:rgb(35, 35, 35)">Descrição:</h6>
+                    @item.Descriçao
+                    <h6 class="m-0 font-weight-bold" style="color:rgb(35, 35, 35)">Traços Raciais:</h6>
+                    @item.Traços
+                </div>
+            </div>
+        </div>
+    }
+</div>
