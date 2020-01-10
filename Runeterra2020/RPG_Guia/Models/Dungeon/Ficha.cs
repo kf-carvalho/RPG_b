@@ -39,11 +39,14 @@ namespace RPG_Guia.Models
         public virtual List<Runa> Runas { get; set; }
         public virtual List<Pericia> Pericias { get; set; }
         public virtual List<Item> Itens { get; set; }
-
+        public virtual List<Arma> Armas { get; set; }
+        public virtual List<Armadura> Armaduras { get; set; }
         public Ficha()
         {
             this.Pericias = new List<Pericia>();
             this.Itens = new List<Item>();
+            this.Armaduras = new List<Armadura>();
+            this.Armas = new List<Arma>();
         }
     }
     
