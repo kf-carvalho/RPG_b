@@ -1,0 +1,66 @@
+﻿@model RPG_Guia.Models.Armadura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Armadura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClasseArmadura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClasseArmadura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Força)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Força)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Furtividade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Furtividade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ArmaduraId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -22,5 +22,8 @@ namespace RPG_Guia.Data
         public DbSet<Territorio> Territorios { get; set; }
         public DbSet<Raça> Raças { get; set; }
         public DbSet<EscalaRunica> EscalaRunicas { get; set; }
+        public DbSet<Arma> Armas { get; set; }
+        public DbSet<Armadura> Armaduras { get; set; }
+
     }
 }

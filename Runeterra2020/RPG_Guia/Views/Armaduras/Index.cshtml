@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RPG_Guia.Models.Armadura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClasseArmadura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Força)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Furtividade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Peso)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClasseArmadura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Força)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Furtividade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Peso)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ArmaduraId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArmaduraId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ArmaduraId })
+        </td>
+    </tr>
+}
+
+</table>

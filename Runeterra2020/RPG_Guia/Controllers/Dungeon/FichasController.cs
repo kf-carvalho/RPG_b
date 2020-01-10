@@ -41,7 +41,7 @@ namespace RPG_Guia.Controllers.Dungeon
         public ActionResult Create()
         {
             ViewBag.ClasseId = new SelectList(db.Classes, "ClasseId", "Descriçao");
-            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Descriçao");
+            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Nome");
             ViewBag.TerritorioId = new SelectList(db.Territorios, "TerritorioId", "Descriçao");
             ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "NomeUsuario");
             return View();
@@ -62,7 +62,7 @@ namespace RPG_Guia.Controllers.Dungeon
             }
 
             ViewBag.ClasseId = new SelectList(db.Classes, "ClasseId", "Descriçao", ficha.ClasseId);
-            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Descriçao", ficha.RaçaId);
+            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Nome", ficha.RaçaId);
             ViewBag.TerritorioId = new SelectList(db.Territorios, "TerritorioId", "Descriçao", ficha.TerritorioId);
             ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "NomeUsuario", ficha.UsuarioId);
             return View(ficha);
@@ -81,7 +81,7 @@ namespace RPG_Guia.Controllers.Dungeon
                 return HttpNotFound();
             }
             ViewBag.ClasseId = new SelectList(db.Classes, "ClasseId", "Descriçao", ficha.ClasseId);
-            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Descriçao", ficha.RaçaId);
+            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Nome", ficha.RaçaId);
             ViewBag.TerritorioId = new SelectList(db.Territorios, "TerritorioId", "Descriçao", ficha.TerritorioId);
             ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "NomeUsuario", ficha.UsuarioId);
             return View(ficha);
@@ -101,7 +101,7 @@ namespace RPG_Guia.Controllers.Dungeon
                 return RedirectToAction("Index");
             }
             ViewBag.ClasseId = new SelectList(db.Classes, "ClasseId", "Descriçao", ficha.ClasseId);
-            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Descriçao", ficha.RaçaId);
+            ViewBag.RaçaId = new SelectList(db.Raças, "RaçaId", "Nome", ficha.RaçaId);
             ViewBag.TerritorioId = new SelectList(db.Territorios, "TerritorioId", "Descriçao", ficha.TerritorioId);
             ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "NomeUsuario", ficha.UsuarioId);
             return View(ficha);
