@@ -25,5 +25,6 @@ namespace RPG_Guia.Data
         public DbSet<Arma> Armas { get; set; }
         public DbSet<Armadura> Armaduras { get; set; }
 
+        public System.Data.Entity.DbSet<RPG_Guia.Models.Party> Parties { get; set; }
     }
 }

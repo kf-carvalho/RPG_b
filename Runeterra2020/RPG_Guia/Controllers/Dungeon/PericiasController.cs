@@ -47,7 +47,7 @@ namespace RPG_Guia.Controllers.Dungeon
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PericiaId,Modificador,Mastery,Proeficiencia")] Pericia pericia)
+        public ActionResult Create([Bind(Include = "PericiaId,Nome,Modificador,Mastery,Proeficiencia")] Pericia pericia)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace RPG_Guia.Controllers.Dungeon
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PericiaId,Modificador,Mastery,Proeficiencia")] Pericia pericia)
+        public ActionResult Edit([Bind(Include = "PericiaId,Nome,Modificador,Mastery,Proeficiencia")] Pericia pericia)
         {
             if (ModelState.IsValid)
             {

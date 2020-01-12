@@ -36,6 +36,7 @@ namespace RPG_Guia.Models
         public Classe Classe { get; set; }
         public int ClasseId { get; set; }
         //
+        public virtual List<Party> Parties { get; set; }
         public virtual List<Runa> Runas { get; set; }
         public virtual List<Pericia> Pericias { get; set; }
         public virtual List<Item> Itens { get; set; }

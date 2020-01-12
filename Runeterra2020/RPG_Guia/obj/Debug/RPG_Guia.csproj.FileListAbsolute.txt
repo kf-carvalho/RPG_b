@@ -180,4 +180,3 @@ C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Gu
 C:\Users\User\Documents\0001GitRpg\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.csproj.GenerateResource.cache
 C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.Migrations.Initial.resources
 C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.csproj.GenerateResource.cache
-C:\Users\kaffe\Desktop\Repositorio\RPG_b\Runeterra2020\RPG_Guia\obj\Debug\RPG_Guia.Migrations.FinD.resources
