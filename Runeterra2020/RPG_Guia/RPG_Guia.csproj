@@ -133,6 +133,7 @@
     <Compile Include="Controllers\Dungeon\ClassesController.cs" />
     <Compile Include="Controllers\Dungeon\FichasController.cs" />
     <Compile Include="Controllers\Dungeon\ItemsController.cs" />
+    <Compile Include="Controllers\Dungeon\PartiesController.cs" />
     <Compile Include="Controllers\Dungeon\PericiasController.cs" />
     <Compile Include="Controllers\Dungeon\RaçaController.cs" />
     <Compile Include="Controllers\Dungeon\TerritoriosController.cs" />
@@ -143,13 +144,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001081750439_Initial.cs" />
-    <Compile Include="Migrations\202001081750439_Initial.designer.cs">
-      <DependentUpon>202001081750439_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202001100044201_FinD.cs" />
-    <Compile Include="Migrations\202001100044201_FinD.designer.cs">
-      <DependentUpon>202001100044201_FinD.cs</DependentUpon>
+    <Compile Include="Migrations\202001122035080_Initial.cs" />
+    <Compile Include="Migrations\202001122035080_Initial.designer.cs">
+      <DependentUpon>202001122035080_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Inventory\Arma.cs" />
@@ -159,6 +156,7 @@
     <Compile Include="Models\Inventory\Item.cs" />
     <Compile Include="Models\Dungeon\Pericia.cs" />
     <Compile Include="Models\Dungeon\Raça.cs" />
+    <Compile Include="Models\Dungeon\Party.cs" />
     <Compile Include="Models\Rune\EscalaRunica.cs" />
     <Compile Include="Models\Rune\Runa.cs" />
     <Compile Include="Models\Dungeon\Territorio.cs" />
@@ -1944,16 +1942,6 @@
     <Content Include="Views\Usuarios\Details.cshtml" />
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
-    <Content Include="Views\Items\Create.cshtml" />
-    <Content Include="Views\Items\Delete.cshtml" />
-    <Content Include="Views\Items\Details.cshtml" />
-    <Content Include="Views\Items\Edit.cshtml" />
-    <Content Include="Views\Items\Index.cshtml" />
-    <Content Include="Views\Pericias\Create.cshtml" />
-    <Content Include="Views\Pericias\Delete.cshtml" />
-    <Content Include="Views\Pericias\Details.cshtml" />
-    <Content Include="Views\Pericias\Edit.cshtml" />
-    <Content Include="Views\Pericias\Index.cshtml" />
     <Content Include="Views\Territorios\Create.cshtml" />
     <Content Include="Views\Territorios\Delete.cshtml" />
     <Content Include="Views\Territorios\Details.cshtml" />
@@ -1970,11 +1958,6 @@
     <Content Include="Views\Runas\Edit.cshtml" />
     <Content Include="Views\Runas\Index.cshtml" />
     <Content Include="Views\Usuarios\Login.cshtml" />
-    <Content Include="Views\Fichas\Create.cshtml" />
-    <Content Include="Views\Fichas\Delete.cshtml" />
-    <Content Include="Views\Fichas\Details.cshtml" />
-    <Content Include="Views\Fichas\Edit.cshtml" />
-    <Content Include="Views\Fichas\Index.cshtml" />
     <Content Include="Views\Classes\Create.cshtml" />
     <Content Include="Views\Classes\Delete.cshtml" />
     <Content Include="Views\Classes\Details.cshtml" />
@@ -1990,11 +1973,31 @@
     <Content Include="Views\Armas\Details.cshtml" />
     <Content Include="Views\Armas\Edit.cshtml" />
     <Content Include="Views\Armas\Index.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Armaduras\Create.cshtml" />
     <Content Include="Views\Armaduras\Delete.cshtml" />
     <Content Include="Views\Armaduras\Details.cshtml" />
     <Content Include="Views\Armaduras\Edit.cshtml" />
     <Content Include="Views\Armaduras\Index.cshtml" />
+    <Content Include="Views\Fichas\Create.cshtml" />
+    <Content Include="Views\Fichas\Delete.cshtml" />
+    <Content Include="Views\Fichas\Details.cshtml" />
+    <Content Include="Views\Fichas\Edit.cshtml" />
+    <Content Include="Views\Fichas\Index.cshtml" />
+    <Content Include="Views\Parties\Create.cshtml" />
+    <Content Include="Views\Parties\Delete.cshtml" />
+    <Content Include="Views\Parties\Details.cshtml" />
+    <Content Include="Views\Parties\Edit.cshtml" />
+    <Content Include="Views\Parties\Index.cshtml" />
+    <Content Include="Views\Pericias\Create.cshtml" />
+    <Content Include="Views\Pericias\Delete.cshtml" />
+    <Content Include="Views\Pericias\Details.cshtml" />
+    <Content Include="Views\Pericias\Edit.cshtml" />
+    <Content Include="Views\Pericias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2005,11 +2008,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001081750439_Initial.resx">
-      <DependentUpon>202001081750439_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001100044201_FinD.resx">
-      <DependentUpon>202001100044201_FinD.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001122035080_Initial.resx">
+      <DependentUpon>202001122035080_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -39,6 +39,20 @@ namespace RPG_Guia.Controllers.Dungeon
         // GET: Armaduras/Create
         public ActionResult Create()
         {
+            var furtiv = new[]{
+                new SelectListItem { Value = "Desvantagem", Text = "Desvantagem" },
+                new SelectListItem { Value = "Vantagem", Text = "Vantagem" },
+                new SelectListItem { Value = "-", Text = "-" },
+            };
+            ViewBag.Furtividade = new SelectList(furtiv, "Value", "Text");
+
+            var categor = new[]{
+                new SelectListItem { Value = "Armadura Leve", Text = "Leve" },
+                new SelectListItem { Value = "Armadura Média", Text = "Média" },
+                new SelectListItem { Value = "Armadura Pesada ", Text = "Pesada" },
+                new SelectListItem { Value = "Escudo", Text = "Escudo" },
+            };
+            ViewBag.Categoria = new SelectList(categor, "Value", "Text");
             return View();
         }
 
@@ -47,8 +61,23 @@ namespace RPG_Guia.Controllers.Dungeon
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ArmaduraId,Nome,Categoria,ClasseArmadura,Força,Furtividade,Peso")] Armadura armadura)
+        public ActionResult Create([Bind(Include = "ArmaduraId,Nome,Categoria,ClasseArmadura,Força,Furtividade,Peso,Preço")] Armadura armadura)
         {
+            var furtiv = new[]{
+                new SelectListItem { Value = "Desvantagem", Text = "Desvantagem" },
+                new SelectListItem { Value = "Vantagem", Text = "Vantagem" },
+                new SelectListItem { Value = "-", Text = "-" },
+            };
+            ViewBag.Furtividade = new SelectList(furtiv, "Value", "Text");
+
+            var categor = new[]{
+                new SelectListItem { Value = "Armadura Leve", Text = "Leve" },
+                new SelectListItem { Value = "Armadura Média", Text = "Média" },
+                new SelectListItem { Value = "Armadura Pesada ", Text = "Pesada" },
+                new SelectListItem { Value = "Escudo", Text = "Escudo" },
+            };
+            ViewBag.Categoria = new SelectList(categor, "Value", "Text");
+
             if (ModelState.IsValid)
             {
                 db.Armaduras.Add(armadura);
@@ -62,6 +91,20 @@ namespace RPG_Guia.Controllers.Dungeon
         // GET: Armaduras/Edit/5
         public ActionResult Edit(int? id)
         {
+            var furtiv = new[]{
+                new SelectListItem { Value = "Desvantagem", Text = "Desvantagem" },
+                new SelectListItem { Value = "Vantagem", Text = "Vantagem" },
+                new SelectListItem { Value = "-", Text = "-" },
+            };
+            ViewBag.Furtividade = new SelectList(furtiv, "Value", "Text");
+
+            var categor = new[]{
+                new SelectListItem { Value = "Armadura Leve", Text = "Leve" },
+                new SelectListItem { Value = "Armadura Média", Text = "Média" },
+                new SelectListItem { Value = "Armadura Pesada ", Text = "Pesada" },
+                new SelectListItem { Value = "Escudo", Text = "Escudo" },
+            };
+            ViewBag.Categoria = new SelectList(categor, "Value", "Text");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -79,8 +122,22 @@ namespace RPG_Guia.Controllers.Dungeon
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ArmaduraId,Nome,Categoria,ClasseArmadura,Força,Furtividade,Peso")] Armadura armadura)
+        public ActionResult Edit([Bind(Include = "ArmaduraId,Nome,Categoria,ClasseArmadura,Força,Furtividade,Peso,Preço")] Armadura armadura)
         {
+            var furtiv = new[]{
+                new SelectListItem { Value = "Desvantagem", Text = "Desvantagem" },
+                new SelectListItem { Value = "Vantagem", Text = "Vantagem" },
+                new SelectListItem { Value = "-", Text = "-" },
+            };
+            ViewBag.Furtividade = new SelectList(furtiv, "Value", "Text");
+            var categor = new[]{
+                new SelectListItem { Value = "Armadura Leve", Text = "Leve" },
+                new SelectListItem { Value = "Armadura Média", Text = "Média" },
+                new SelectListItem { Value = "Armadura Pesada ", Text = "Pesada" },
+                new SelectListItem { Value = "Escudo", Text = "Escudo" },
+            };
+            ViewBag.Categoria = new SelectList(categor, "Value", "Text");
+
             if (ModelState.IsValid)
             {
                 db.Entry(armadura).State = EntityState.Modified;
@@ -90,29 +147,21 @@ namespace RPG_Guia.Controllers.Dungeon
             return View(armadura);
         }
 
-        // GET: Armaduras/Delete/5
-        public ActionResult Delete(int? id)
+        // POST: Armaduras/Delete/5]
+        public ActionResult Delete(int id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             Armadura armadura = db.Armaduras.Find(id);
-            if (armadura == null)
-            {
-                return HttpNotFound();
-            }
-            return View(armadura);
-        }
 
-        // POST: Armaduras/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Armadura armadura = db.Armaduras.Find(id);
-            db.Armaduras.Remove(armadura);
-            db.SaveChanges();
+            if (armadura == null)
+                return HttpNotFound();
+
+            if (ModelState.IsValid)
+            {
+                db.Armaduras.Remove(armadura);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 

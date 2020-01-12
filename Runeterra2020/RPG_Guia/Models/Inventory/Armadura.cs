@@ -14,6 +14,7 @@ namespace RPG_Guia.Models
         public string Força { get; set; }
         public string Furtividade { get; set; }
         public string Peso { get; set; }
+        public string Preço { get; set; }
         public virtual List<Ficha> Fichas { get; set; }
     }
 }

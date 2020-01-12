@@ -59,9 +59,18 @@
             @Html.DisplayFor(model => model.Peso)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Preço)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preço)
+        </dd>
+
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
@@ -70,3 +79,18 @@
         </div>
     }
 </div>
+
+@section Scripts{
+    <!--SCRIPTS DE CONFIRMAÇÃO-->
+    <script>
+        //Confirmar Alterações
+        $(document).ready(function () {
+            $('#btn_Deletar').click(function (e) {
+                var aux = confirm('Deseja confirmar as alterações?');
+                if (!aux) {
+                    e.preventDefault();
+                }
+            })
+        })
+    </script>
+}

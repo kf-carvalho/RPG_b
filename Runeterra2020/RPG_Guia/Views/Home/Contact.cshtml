@@ -1,23 +1,40 @@
-﻿@{
+﻿@model IEnumerable<RPG_Guia.Models.Party>
+
+@{
     ViewBag.Title = "Teste";
 }
 
 @Styles.Render("~/Content/css")
 @Scripts.Render("~/bundles/modernizr")
+<div class="container-fluid">
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Escolha a party:</div>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#PartiesHistory" aria-expanded="true" aria-controls="collapsePages">
+                            <div class="col-auto">
+                                <i class="fas fa-dragon fa-2x text-danger"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="PartiesHistory" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Histórico:</h6>
+                            <a class="collapse-item" href="@Url.RouteUrl(new { controller = "Parties", action = "Create" })">Criar Nova</a>
+                            <div class="collapse-divider"></div>
+                       
 
-<body>
-    <div class="container-fluid">
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</body>
-
+</div>
 
 

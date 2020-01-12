@@ -8,6 +8,7 @@ namespace RPG_Guia.Models
     public class Pericia
     {
         public int PericiaId { get; set; }
+        public string Nome { get; set; }
         //Total de pontos que a pericia possui
         public int Modificador { get; set; }
         //Indicador do tipo da pericia ex: ( força, inteligencia, destreza...)

@@ -12,44 +12,52 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-   @* <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>*@
+    <h1 class="h3 mb-2 text-gray-800">Equipamentos</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Inventário D&D</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                             
+
                             <th>
                                 @Html.DisplayNameFor(model => model.Nome)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Descriçao)
+                                @Html.DisplayNameFor(model => model.Custo)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Peso)
                             </th>
                             <th></th>
                         </tr>
-                    @foreach (var item in Model)
-                    {
+                        @foreach (var item in Model)
+                        {
                         <tr>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Nome)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Descriçao)
+                                @Html.DisplayFor(modelItem => item.Custo)
                             </td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
+                                @Html.DisplayFor(modelItem => item.Peso)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", "Items", new { id = item.ItemId })" class="btn btn-info btn-circle btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                                <a href="@Url.Action("Details", "Items", new { id = item.ItemId })" class="btn btn-danger btn-circle btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
                             </td>
                         </tr>
-                     }
+                        }
                     </thead>
                 </table>
             </div>
